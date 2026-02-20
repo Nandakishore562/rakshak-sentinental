@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://localhost:5173/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>.gm-err-container{height:100%;width:100%;display:table;background-color:#e8eaed;position:relative;left:0;top:0}.gm-err-content{border-radius:1px;padding-top:0;padding-left:10%;padding-right:10%;position:static;vertical-align:middle;display:table-cell}.gm-err-content a{color:#3c4043}.gm-err-icon{text-align:center}.gm-err-title{margin:5px;margin-bottom:20px;color:#3c4043;font-family:Roboto,Arial,sans-serif;text-align:center;font-size:24px}.gm-err-message{margin:5px;color:#3c4043;font-family:Roboto,Arial,sans-serif;text-align:center;font-size:12px}.gm-err-autocomplete{padding-left:20px;background-repeat:no-repeat;-webkit-background-size:15px 15px;background-size:15px 15px}sentinel{}
+</style><style>.gm-style-moc{background-color:rgba(0,0,0,.59);pointer-events:none;text-align:center;-webkit-transition:opacity ease-in-out;transition:opacity ease-in-out}.gm-style-mot{color:white;font-family:Roboto,Arial,sans-serif;font-size:22px;margin:0;position:relative;top:50%;transform:translateY(-50%);-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%)}sentinel{}
+</style><style>.gm-style img{max-width: none;}.gm-style {font: 400 11px Roboto, Arial, sans-serif; text-decoration: none;}</style>
+  <script type="module">import { injectIntoGlobalHook } from "/@react-refresh";
+injectIntoGlobalHook(window);
+window.$RefreshReg$ = () => {};
+window.$RefreshSig$ = () => (type) => type;</script>
+
+  <script type="module" src="./Rakshak Sentinel — Data-Driven Civic Action_files/client"></script>
+
+  
+  <link rel="icon" type="image/svg+xml" href="http://localhost:5173/vite.svg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rakshak Sentinel — Data-Driven Civic Action</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+  <link href="./Rakshak Sentinel — Data-Driven Civic Action_files/css2" rel="stylesheet">
+<style type="text/css" data-vite-dev-id="C:/Users/Chilaka Nandakishore/OneDrive/Desktop/RAKSHAK SENTINEL/client/src/index.css">/* ══════════════════════════════════════════════════════════
+   RAKSHAK SENTINEL — Design System (Ported)
+   Deep Navy + Neon Amber | Glassmorphic | High-Tech
+   ══════════════════════════════════════════════════════════ */
+/* Google Maps is loaded via @react-google-maps/api — no external CSS needed */
+
+:root {
+  --navy-900: #050816;
+  --navy-800: #0a0e27;
+  --navy-700: #0f1535;
+  --navy-600: #141b42;
+  --navy-500: #1a2255;
+  --navy-400: #252e6a;
+  --amber-500: #ffb800;
+  --amber-400: #ffc933;
+  --amber-300: #ffd966;
+  --amber-200: #ffe599;
+  --amber-glow: rgba(255, 184, 0, 0.35);
+  --amber-glow-soft: rgba(255, 184, 0, 0.12);
+  --red-500: #ff4757;
+  --red-glow: rgba(255, 71, 87, 0.3);
+  --green-500: #2ed573;
+  --green-glow: rgba(46, 213, 115, 0.3);
+  --blue-500: #3b82f6;
+  --white: #fff;
+  --gray-100: #f1f5f9;
+  --gray-200: #e2e8f0;
+  --gray-300: #cbd5e1;
+  --gray-400: #94a3b8;
+  --gray-500: #64748b;
+  --glass-bg: rgba(15, 21, 53, 0.65);
+  --glass-bg-solid: rgba(10, 14, 39, 0.85);
+  --glass-border: rgba(255, 184, 0, 0.15);
+  --glass-border-hover: rgba(255, 184, 0, 0.35);
+  --glass-blur: 18px;
+  --font-body: 'Inter', sans-serif;
+  --font-display: 'Orbitron', monospace;
+  --font-mono: 'JetBrains Mono', monospace;
+  --gap: 16px;
+  --radius: 14px;
+  --radius-sm: 8px;
+  --radius-xs: 5px;
+  --ease: cubic-bezier(0.4, 0, 0.2, 1);
+  --duration: 0.25s;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box
+}
+
+html {
+  font-size: 14px;
+  scroll-behavior: smooth
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--navy-900);
+  color: var(--gray-200);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  line-height: 1.6
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(rgba(255, 184, 0, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 184, 0, 0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+  pointer-events: none;
+  z-index: 0
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  top: -30%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120vw;
+  height: 70vh;
+  background: radial-gradient(ellipse, rgba(255, 184, 0, 0.06) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px
+}
+
+::-webkit-scrollbar-track {
+  background: var(--navy-800)
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--navy-500);
+  border-radius: 10px
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--amber-500)
+}
+
+/* Header & Layout Utilities */
+.logo-mark {
+  animation: logoPulse 3s ease-in-out infinite;
+  filter: drop-shadow(0 0 8px var(--amber-glow));
+}
+
+@keyframes logoPulse {
+
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(1.08);
+    opacity: .85;
+  }
+}
+
+.brand-name {
+  font-family: var(--font-display);
+  font-weight: 900;
+  background: linear-gradient(135deg, var(--amber-500), var(--amber-300));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.pulse-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--green-500);
+  box-shadow: 0 0 8px var(--green-glow);
+  animation: pulseDot 2s ease-in-out infinite;
+}
+
+@keyframes pulseDot {
+
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: .4;
+    transform: scale(.75);
+  }
+}
+
+/* Glass Card */
+.glass-card {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius);
+  backdrop-filter: blur(var(--glass-blur));
+  overflow: hidden;
+  transition: border-color var(--duration) var(--ease), box-shadow var(--duration) var(--ease);
+  display: flex;
+  flex-direction: column;
+}
+
+.glass-card:hover {
+  border-color: var(--glass-border-hover);
+  box-shadow: 0 0 30px rgba(255, 184, 0, 0.06), inset 0 0 30px rgba(255, 184, 0, 0.02);
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 9px 18px;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all var(--duration) var(--ease);
+  font-size: 0.78rem;
+}
+
+.btn-sm {
+  padding: 5px 12px;
+  border-radius: var(--radius-xs);
+  font-size: 0.7rem;
+}
+
+.btn-amber {
+  background: linear-gradient(135deg, var(--amber-500), #e6a600);
+  color: var(--navy-900);
+  box-shadow: 0 4px 15px var(--amber-glow);
+}
+
+.btn-amber:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 25px var(--amber-glow);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: var(--gray-300);
+}
+
+.btn-outline:hover,
+.btn-outline.active {
+  border-color: var(--amber-500);
+  color: var(--amber-400);
+  background: var(--amber-glow-soft);
+}
+
+/* Upload Zone */
+.upload-zone {
+  margin: 14px;
+  border: 2px dashed rgba(255, 184, 0, 0.25);
+  border-radius: var(--radius);
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: all 0.25s;
+}
+
+.upload-zone.drag-over {
+  border-color: var(--amber-500);
+  background: rgba(255, 184, 0, 0.06);
+}
+
+.upload-icon-ring {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 184, 0, 0.2);
+  display: grid;
+  place-items: center;
+  margin: 0 auto 14px;
+  background: rgba(255, 184, 0, 0.05);
+  animation: ringFloat 4s ease-in-out infinite;
+}
+
+@keyframes ringFloat {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+/* Panel Header */
+.panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.panel-title-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.badge {
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  padding: 3px 10px;
+  border-radius: 50px;
+  text-transform: uppercase;
+}
+
+.badge-amber {
+  background: rgba(255, 184, 0, 0.12);
+  color: var(--amber-400);
+  border: 1px solid rgba(255, 184, 0, 0.25);
+}
+
+.badge-green {
+  background: rgba(46, 213, 115, 0.12);
+  color: var(--green-500);
+  border: 1px solid rgba(46, 213, 115, 0.25);
+}
+
+.field-label {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--gray-400);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.glass-card-inner {
+  background: rgba(10, 14, 39, 0.75);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-sm);
+  backdrop-filter: blur(12px);
+}
+
+/* Editor */
+.field-input {
+  width: 100%;
+  padding: 8px 12px;
+  border-radius: var(--radius-xs);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--gray-200);
+  outline: none;
+}
+
+.field-input:focus {
+  border-color: var(--amber-500);
+}
+
+.letter-editor {
+  min-height: 160px;
+  max-height: 250px;
+  overflow-y: auto;
+  padding: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.02);
+  color: var(--gray-200);
+  font-size: 0.8rem;
+  outline: none;
+}
+
+/* Responsive Grid */
+.app-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr 1fr;
+  gap: var(--gap);
+  padding: var(--gap) 20px;
+  flex: 1;
+  overflow: hidden;
+}
+
+@media (max-width: 1200px) {
+  .app-grid {
+    grid-template-columns: 1fr 1fr;
+    overflow-y: auto;
+  }
+
+  .col-span-2-lg {
+    grid-column: span 2;
+    order: -1;
+  }
+}
+
+@media (max-width: 768px) {
+  .app-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .col-span-2-lg {
+    grid-column: span 1;
+  }
+}</style><script src="./Rakshak Sentinel — Data-Driven Civic Action_files/visualization.js.download"></script><script src="./Rakshak Sentinel — Data-Driven Civic Action_files/main.js.download"></script><script type="text/javascript" charset="UTF-8" src="./Rakshak Sentinel — Data-Driven Civic Action_files/common.js.download"></script><script type="text/javascript" charset="UTF-8" src="./Rakshak Sentinel — Data-Driven Civic Action_files/util.js.download"></script><script type="text/javascript" charset="UTF-8" src="./Rakshak Sentinel — Data-Driven Civic Action_files/map.js.download"></script><script type="text/javascript" charset="UTF-8" src="./Rakshak Sentinel — Data-Driven Civic Action_files/onion.js.download"></script><script type="text/javascript" charset="UTF-8" src="./Rakshak Sentinel — Data-Driven Civic Action_files/visualization_impl.js.download"></script><script type="text/javascript" charset="UTF-8" src="./Rakshak Sentinel — Data-Driven Civic Action_files/log.js.download"></script></head>
+
+<body>
+  <div id="root"><div class="flex flex-col min-h-screen text-slate-200"><header class="sticky top-0 z-50 flex items-center justify-between px-6 py-3 bg-[rgba(10,14,39,0.85)] border-b border-[rgba(255,184,0,0.15)] backdrop-blur-lg"><div class="flex items-center gap-3.5"><div class="logo-mark w-10 h-10"><svg viewBox="0 0 40 40" class="w-full h-full"><polygon points="20,2 38,32 2,32" fill="none" stroke="#ffb800" stroke-width="2.5"></polygon><circle cx="20" cy="22" r="3" fill="#ffb800"></circle><line x1="20" y1="10" x2="20" y2="18" stroke="#ffb800" stroke-width="2.5" stroke-linecap="round"></line></svg></div><div><h1 class="brand-name text-xl tracking-[3px]">RAKSHAK SENTINEL</h1><p class="text-[0.72rem] text-slate-400 tracking-widest font-medium uppercase">Data-Driven Civic Action</p></div></div><div class="hidden md:flex items-center gap-2.5"><div class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full border border-green-500/30 bg-green-500/10 text-green-500 text-xs font-medium tracking-wide"><span class="pulse-dot"></span><span>SYSTEM LIVE</span></div><div class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full border border-white/10 bg-white/5 text-slate-300 text-xs font-medium tracking-wide"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield-check" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="m9 12 2 2 4-4"></path></svg><span>AI Engine Active</span></div><div class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full border border-white/10 bg-white/5 text-slate-300 text-xs font-medium tracking-wide"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-database" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M3 5V19A9 3 0 0 0 21 19V5"></path><path d="M3 12A9 3 0 0 0 21 12"></path></svg><span>2,847 Records</span></div></div><div class="flex items-center gap-3"><span class="font-mono text-xs text-slate-400 tracking-wide">10:21:31</span><button class="w-9 h-9 grid place-items-center rounded-lg border border-white/10 bg-white/5 text-slate-400 hover:border-amber-500 hover:text-amber-500 hover:bg-amber-500/10 transition-colors"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-settings" aria-hidden="true"><path d="M9.671 4.136a2.34 2.34 0 0 1 4.659 0 2.34 2.34 0 0 0 3.319 1.915 2.34 2.34 0 0 1 2.33 4.033 2.34 2.34 0 0 0 0 3.831 2.34 2.34 0 0 1-2.33 4.033 2.34 2.34 0 0 0-3.319 1.915 2.34 2.34 0 0 1-4.659 0 2.34 2.34 0 0 0-3.32-1.915 2.34 2.34 0 0 1-2.33-4.033 2.34 2.34 0 0 0 0-3.831A2.34 2.34 0 0 1 6.35 6.051a2.34 2.34 0 0 0 3.319-1.915"></path><circle cx="12" cy="12" r="3"></circle></svg></button></div></header><main class="app-grid"><section class="glass-card flex flex-col h-full"><div class="panel-header"><div class="panel-title-group"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-scan-eye text-amber-500 w-5 h-5 drop-shadow-[0_0_4px_rgba(255,184,0,0.35)]" aria-hidden="true"><path d="M3 7V5a2 2 0 0 1 2-2h2"></path><path d="M17 3h2a2 2 0 0 1 2 2v2"></path><path d="M21 17v2a2 2 0 0 1-2 2h-2"></path><path d="M7 21H5a2 2 0 0 1-2-2v-2"></path><circle cx="12" cy="12" r="1"></circle><path d="M18.944 12.33a1 1 0 0 0 0-.66 7.5 7.5 0 0 0-13.888 0 1 1 0 0 0 0 .66 7.5 7.5 0 0 0 13.888 0"></path></svg><h2 class="font-display font-bold tracking-widest text-white text-sm">Pothole Detection</h2></div><span class="badge badge-amber">AI Vision</span></div><div class="flex-1 p-4 flex flex-col min-h-0"><div class="relative border-2 border-dashed rounded-xl flex-1 flex items-center justify-center overflow-hidden transition-all duration-200 
+            border-amber-500/25 bg-amber-500/5"><div class="w-full h-full block"><canvas class="w-full h-full object-contain block" width="440" height="350"></canvas></div></div><div class="mt-4 pt-4 border-t border-white/5 space-y-3"><div class="flex items-center justify-between"><h3 class="text-xs font-semibold text-white">Analysis Results</h3><button class="btn-sm btn-outline flex items-center gap-1.5"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-refresh-cw" aria-hidden="true"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"></path><path d="M21 3v5h-5"></path><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"></path><path d="M8 16H3v5"></path></svg> New Scan</button></div><div class="grid grid-cols-3 gap-2"><div class="bg-white/5 border border-white/5 rounded-lg p-2.5 text-center"><div class="font-display font-bold text-lg text-amber-500">2</div><div class="text-[0.65rem] text-slate-500 uppercase tracking-wider mt-0.5">Detected</div></div><div class="bg-white/5 border border-white/5 rounded-lg p-2.5 text-center"><div class="font-display font-bold text-lg text-amber-500">89%</div><div class="text-[0.65rem] text-slate-500 uppercase tracking-wider mt-0.5">Confidence</div></div><div class="bg-white/5 border border-white/5 rounded-lg p-2.5 text-center"><div class="font-display font-bold text-lg text-red-500">High</div><div class="text-[0.65rem] text-slate-500 uppercase tracking-wider mt-0.5">Risk Level</div></div></div><div class="h-1.5 bg-white/5 rounded-full overflow-hidden"><div class="h-full bg-gradient-to-r from-green-500 via-amber-500 to-red-500 w-[75%] rounded-full"></div></div></div></div></section><section class="glass-card flex flex-col h-full col-span-2-lg"><div class="panel-header"><div class="panel-title-group"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin text-amber-500 w-5 h-5 drop-shadow-[0_0_4px_rgba(255,184,0,0.35)]" aria-hidden="true"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg><h2 class="font-display font-bold tracking-widest text-white text-sm">Accident Heatmap</h2></div><div class="flex gap-1.5"><button class="btn-sm border transition-colors border-amber-500 text-amber-500 bg-amber-500/10">Heatmap</button><button class="btn-sm border transition-colors border-white/10 text-slate-400 hover:border-amber-500/50">Markers</button><button class="btn-sm border transition-colors border-white/10 text-slate-400 hover:border-amber-500/50">Zones</button></div></div><div class="flex-1 m-4 mb-0 rounded-lg overflow-hidden relative" style="min-height: 300px;"><div></div><div style="width: 100%; height: 100%; border-radius: 8px; position: relative; overflow: hidden;"><div style="height: 100%; width: 100%; position: absolute; top: 0px; left: 0px; background-color: rgb(229, 227, 223);"><div class="gm-err-container"><div class="gm-err-content"><div class="gm-err-icon"><img src="./Rakshak Sentinel — Data-Driven Civic Action_files/icon_error.png" alt="" draggable="false" style="user-select: none;"></div><div class="gm-err-title">Sorry! Something went wrong.</div><div class="gm-err-message">This page didn't load Google Maps correctly. See the JavaScript console for technical details.</div></div></div></div></div><div class="absolute bottom-3 left-3 z-10 bg-[rgba(10,14,39,0.9)] border border-[rgba(255,184,0,0.15)] backdrop-blur-md rounded-lg p-3"><h4 class="text-[0.68rem] text-slate-300 font-semibold mb-1.5 tracking-wide">Accident Frequency</h4><div class="flex items-center gap-2"><span class="text-[0.65rem] text-green-500">Low</span><div class="flex-1 h-1.5 rounded-full bg-gradient-to-r from-green-500 via-amber-500 to-red-500" style="min-width: 80px;"></div><span class="text-[0.65rem] text-red-500">Critical</span></div></div></div><div class="flex flex-wrap gap-2 p-4 pt-2.5 border-t border-white/5"><div class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/5 border border-white/5 text-xs text-slate-400"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-triangle-alert text-amber-500" aria-hidden="true"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"></path><path d="M12 9v4"></path><path d="M12 17h.01"></path></svg><span><strong class="text-amber-400 mr-1">23</strong>Hotspots</span></div><div class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/5 border border-white/5 text-xs text-slate-400"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-trending-up text-amber-500" aria-hidden="true"><path d="M16 7h6v6"></path><path d="m22 7-8.5 8.5-5-5L2 17"></path></svg><span><strong class="text-amber-400 mr-1">+12%</strong>This Month</span></div><div class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/5 border border-white/5 text-xs text-slate-400"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-activity text-amber-500" aria-hidden="true"><path d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2"></path></svg><span><strong class="text-amber-400 mr-1">487</strong>Reports</span></div><div class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/5 border border-white/5 text-xs text-slate-400"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clock text-slate-500" aria-hidden="true"><path d="M12 6v6l4 2"></path><circle cx="12" cy="12" r="10"></circle></svg><span><span class="mr-1">2m ago</span>Updated</span></div></div></section><section class="glass-card flex flex-col h-full"><div class="panel-header"><div class="panel-title-group"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-text text-amber-500 w-5 h-5 drop-shadow-[0_0_4px_rgba(255,184,0,0.35)]" aria-hidden="true"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"></path><path d="M14 2v5a1 1 0 0 0 1 1h5"></path><path d="M10 9H8"></path><path d="M16 13H8"></path><path d="M16 17H8"></path></svg><h2 class="font-display font-bold tracking-widest text-white text-sm">Civic Letter Generator</h2></div><span class="badge badge-green">Templates</span></div><div class="p-4 pb-2 space-y-4"><div><label class="field-label">Select Template</label><div class="flex gap-2 flex-wrap mt-2"><button class="flex items-center gap-1.5 px-3 py-1.5 rounded text-[0.72rem] font-medium border transition-colors
+                  border-amber-500 text-amber-500 bg-amber-500/10"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-alert" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="12" x2="12" y1="8" y2="12"></line><line x1="12" x2="12.01" y1="16" y2="16"></line></svg> Pothole</button><button class="flex items-center gap-1.5 px-3 py-1.5 rounded text-[0.72rem] font-medium border transition-colors
+                  border-white/10 text-slate-400 bg-white/5"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-siren" aria-hidden="true"><path d="M7 18v-6a5 5 0 1 1 10 0v6"></path><path d="M5 21a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-1a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2z"></path><path d="M21 12h1"></path><path d="M18.5 4.5 18 5"></path><path d="M2 12h1"></path><path d="M12 2v1"></path><path d="m4.929 4.929.707.707"></path><path d="M12 12v6"></path></svg> Accident</button><button class="flex items-center gap-1.5 px-3 py-1.5 rounded text-[0.72rem] font-medium border transition-colors
+                  border-white/10 text-slate-400 bg-white/5"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-hard-hat" aria-hidden="true"><path d="M10 10V5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v5"></path><path d="M14 6a6 6 0 0 1 6 6v3"></path><path d="M4 15v-3a6 6 0 0 1 6-6"></path><rect x="2" y="15" width="20" height="4" rx="1"></rect></svg> Infra</button></div></div><div class="space-y-2"><div class="grid grid-cols-2 gap-2"><div><label class="field-label">To (Authority)</label><input class="field-input mt-1" type="text" value="Municipal Commissioner"></div><div><label class="field-label">Ward / Zone</label><input class="field-input mt-1" placeholder="e.g. Ward 42" type="text" value=""></div></div><div><label class="field-label">Location / Landmark</label><input class="field-input mt-1" placeholder="e.g. Near City Hospital" type="text" value=""></div></div></div><div class="flex-1 px-4 flex flex-col min-h-0"><label class="field-label mb-1">Letter Body</label><div class="flex items-center gap-1 p-1.5 border border-b-0 border-white/10 bg-white/5 rounded-t text-slate-400"><button class="p-1 hover:bg-white/10 rounded"><b class="font-serif">B</b></button><button class="p-1 hover:bg-white/10 rounded"><i class="font-serif">I</i></button><button class="p-1 hover:bg-white/10 rounded"><u class="font-serif">U</u></button><div class="w-px h-4 bg-white/10 mx-1"></div><button class="p-1 hover:bg-white/10 rounded"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-list" aria-hidden="true"><path d="M3 5h.01"></path><path d="M3 12h.01"></path><path d="M3 19h.01"></path><path d="M8 5h13"></path><path d="M8 12h13"></path><path d="M8 19h13"></path></svg></button><button class="p-1 hover:bg-white/10 rounded"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-list-ordered" aria-hidden="true"><path d="M11 5h10"></path><path d="M11 12h10"></path><path d="M11 19h10"></path><path d="M4 4h1v5"></path><path d="M4 9h2"></path><path d="M6.5 20H3.4c0-1 2.6-1.925 2.6-3.5a1.5 1.5 0 0 0-2.6-1.02"></path></svg></button></div><div id="editor-content" class="letter-editor rounded-b" contenteditable="true"><p><b>Subject: Urgent Request for Pothole Repair — Data-Driven Report</b></p>
+<p>Respected Sir/Madam,</p>
+<p>I am writing to bring to your urgent attention the dangerous road conditions at <b>[LOCATION]</b>, Ward <b>[WARD]</b>. Our AI-powered road safety analysis system, <b>Rakshak Sentinel</b>, has detected multiple severe potholes at this location through advanced computer vision analysis.</p>
+<p><b>Key Findings:</b></p>
+<ul>
+<li>Number of potholes detected: <b>[COUNT]</b></li>
+<li>Average severity: <b>High</b></li>
+<li>Detection confidence: <b>94.2%</b></li>
+<li>Risk assessment: <b>Immediate action required</b></li>
+</ul>
+<p>These potholes pose a significant risk to motorists, cyclists, and pedestrians, particularly during monsoon season when they become obscured by water accumulation. We have documented evidence including AI-analyzed imagery with bounding-box annotations.</p>
+<p>We respectfully request immediate repair work at this location to prevent accidents and ensure public safety.</p>
+<p>Yours faithfully,<br>[YOUR NAME]<br>Citizen Safety Advocate</p></div></div><div class="p-4 border-t border-white/5 flex flex-wrap gap-2"><button class="btn-amber px-4 py-2 rounded text-xs font-semibold flex items-center gap-1.5 shadow-lg"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sparkles" aria-hidden="true"><path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"></path><path d="M20 2v4"></path><path d="M22 4h-4"></path><circle cx="4" cy="20" r="2"></circle></svg> AI Generate</button><button class="btn-outline px-3 py-2 rounded text-xs flex items-center gap-1.5"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg> Copy</button><button class="btn-outline px-3 py-2 rounded text-xs flex items-center gap-1.5"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-download" aria-hidden="true"><path d="M12 15V3"></path><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><path d="m7 10 5 5 5-5"></path></svg> Download</button></div></section></main><footer class="relative z-50 flex items-center justify-between px-6 py-2 bg-[rgba(10,14,39,0.85)] border-t border-[rgba(255,184,0,0.15)] text-[0.7rem] text-slate-500"><div class="flex items-center gap-4"><span class="flex items-center gap-1.5"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cpu text-amber-500" aria-hidden="true"><path d="M12 20v2"></path><path d="M12 2v2"></path><path d="M17 20v2"></path><path d="M17 2v2"></path><path d="M2 12h2"></path><path d="M2 17h2"></path><path d="M2 7h2"></path><path d="M20 12h2"></path><path d="M20 17h2"></path><path d="M20 7h2"></path><path d="M7 20v2"></path><path d="M7 2v2"></path><rect x="4" y="4" width="16" height="16" rx="2"></rect><rect x="8" y="8" width="8" height="8" rx="1"></rect></svg><span>Model: YOLOv8-RoadSafe</span></span><span class="flex items-center gap-1.5"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-gauge text-amber-500" aria-hidden="true"><path d="m12 14 4-4"></path><path d="M3.34 19a10 10 0 1 1 17.32 0"></path></svg><span>Accuracy: <strong class="text-amber-400">94.7%</strong></span></span></div><div class="hidden md:block">Rakshak Sentinel v2.1.0 — Empowering Safer Roads Through AI</div><div class="flex items-center gap-4"><span class="flex items-center gap-1.5"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-wifi text-amber-500" aria-hidden="true"><path d="M12 20h.01"></path><path d="M2 8.82a15 15 0 0 1 20 0"></path><path d="M5 12.859a10 10 0 0 1 14 0"></path><path d="M8.5 16.429a5 5 0 0 1 7 0"></path></svg><span>Connected</span></span></div></footer></div></div>
+  <script type="module" src="./Rakshak Sentinel — Data-Driven Civic Action_files/main.jsx"></script>
+
+
+<div style="position: absolute; left: 0px; top: -2px; height: 1px; overflow: hidden; visibility: hidden; width: 1px;"><span style="position: absolute; font-size: 300px; width: auto; height: auto; margin: 0px; padding: 0px; font-family: Roboto, Arial, sans-serif;">BESbswy</span></div><div style="position: absolute; left: 0px; top: -2px; height: 1px; overflow: hidden; visibility: hidden; width: 1px;"><span style="position: absolute; font-size: 300px; width: auto; height: auto; margin: 0px; padding: 0px; font-family: Roboto, Arial, sans-serif;">BESbswy</span></div></body></html>
