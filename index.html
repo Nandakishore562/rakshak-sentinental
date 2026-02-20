@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rakshak Sentinel — Data-Driven Civic Action</title>
+  <meta name="description" content="AI-powered road safety command dashboard for pothole detection, accident analysis, and civic action." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@500;700;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ═══════════════ HEADER ═══════════════ -->
+  <header id="app-header">
+    <div class="header-left">
+      <div class="logo-mark" id="logo-pulse">
+        <svg viewBox="0 0 40 40" width="40" height="40">
+          <polygon points="20,2 38,32 2,32" fill="none" stroke="#ffb800" stroke-width="2.5"/>
+          <circle cx="20" cy="22" r="3" fill="#ffb800"/>
+          <line x1="20" y1="10" x2="20" y2="18" stroke="#ffb800" stroke-width="2.5" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="header-titles">
+        <h1 class="brand-name">RAKSHAK SENTINEL</h1>
+        <p class="tagline">Data-Driven Civic Action</p>
+      </div>
+    </div>
+    <div class="header-center">
+      <div class="status-pill live">
+        <span class="pulse-dot"></span>
+        <span>SYSTEM LIVE</span>
+      </div>
+      <div class="status-pill">
+        <i data-lucide="shield-check" class="icon-sm"></i>
+        <span>AI Engine Active</span>
+      </div>
+      <div class="status-pill">
+        <i data-lucide="database" class="icon-sm"></i>
+        <span id="record-count">2,847 Records</span>
+      </div>
+    </div>
+    <div class="header-right">
+      <span class="timestamp" id="live-clock"></span>
+      <button class="btn-icon" title="Settings" id="btn-settings">
+        <i data-lucide="settings"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- ═══════════════ MAIN GRID ═══════════════ -->
+  <main id="app-grid">
+
+    <!-- ─── LEFT PANEL: POTHOLE DETECTION ─── -->
+    <section class="panel glass-card" id="panel-detection">
+      <div class="panel-header">
+        <div class="panel-title-group">
+          <i data-lucide="scan-eye" class="panel-icon"></i>
+          <h2>Pothole Detection</h2>
+        </div>
+        <span class="badge badge-amber">AI Vision</span>
+      </div>
+
+      <div class="upload-zone" id="upload-zone">
+        <div class="upload-placeholder" id="upload-placeholder">
+          <div class="upload-icon-ring">
+            <i data-lucide="upload-cloud" class="upload-icon"></i>
+          </div>
+          <p class="upload-text">Drag & drop road image here</p>
+          <p class="upload-sub">or <span class="upload-link">browse files</span></p>
+          <p class="upload-formats">PNG, JPG, WEBP — Max 10MB</p>
+          <input type="file" id="file-input" accept="image/*" hidden />
+        </div>
+        <div class="canvas-wrapper" id="canvas-wrapper" style="display:none;">
+          <canvas id="detection-canvas"></canvas>
+          <div class="detection-overlay-info" id="overlay-info"></div>
+        </div>
+      </div>
+
+      <div class="detection-results" id="detection-results" style="display:none;">
+        <div class="result-header">
+          <h3>Analysis Results</h3>
+          <button class="btn-sm btn-outline" id="btn-reupload">
+            <i data-lucide="refresh-cw" class="icon-xs"></i> New Scan
+          </button>
+        </div>
+        <div class="result-cards" id="result-cards"></div>
+        <div class="severity-bar" id="severity-bar">
+          <div class="severity-fill" id="severity-fill"></div>
+        </div>
+        <p class="severity-label" id="severity-label"></p>
+      </div>
+
+      <!-- Sample images strip -->
+      <div class="sample-strip">
+        <p class="sample-label">Try sample images:</p>
+        <div class="sample-thumbs" id="sample-thumbs">
+          <button class="sample-btn" data-sample="1" title="Sample Road 1">🛣️ Road A</button>
+          <button class="sample-btn" data-sample="2" title="Sample Road 2">🛣️ Road B</button>
+          <button class="sample-btn" data-sample="3" title="Sample Road 3">🛣️ Road C</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── CENTER PANEL: ACCIDENT HEATMAP ─── -->
+    <section class="panel glass-card" id="panel-heatmap">
+      <div class="panel-header">
+        <div class="panel-title-group">
+          <i data-lucide="map-pin" class="panel-icon"></i>
+          <h2>Accident Heatmap</h2>
+        </div>
+        <div class="map-controls">
+          <button class="btn-sm btn-amber active" data-layer="heat" id="btn-heat">Heatmap</button>
+          <button class="btn-sm btn-outline" data-layer="markers" id="btn-markers">Markers</button>
+          <button class="btn-sm btn-outline" data-layer="zones" id="btn-zones">Zones</button>
+        </div>
+      </div>
+
+      <div class="map-container" id="map-container">
+        <div id="leaflet-map"></div>
+        <div class="map-legend glass-card-inner" id="map-legend">
+          <h4>Accident Frequency</h4>
+          <div class="legend-scale">
+            <span class="legend-low">Low</span>
+            <div class="legend-gradient"></div>
+            <span class="legend-high">Critical</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="map-stats">
+        <div class="stat-chip">
+          <i data-lucide="alert-triangle" class="icon-xs"></i>
+          <span><strong id="stat-hotspots">23</strong> Hotspots</span>
+        </div>
+        <div class="stat-chip">
+          <i data-lucide="trending-up" class="icon-xs"></i>
+          <span><strong id="stat-increase">+12%</strong> This Month</span>
+        </div>
+        <div class="stat-chip">
+          <i data-lucide="activity" class="icon-xs"></i>
+          <span><strong id="stat-reports">487</strong> Reports</span>
+        </div>
+        <div class="stat-chip">
+          <i data-lucide="clock" class="icon-xs"></i>
+          <span>Updated <strong>2m ago</strong></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── RIGHT PANEL: CIVIC LETTER EDITOR ─── -->
+    <section class="panel glass-card" id="panel-letter">
+      <div class="panel-header">
+        <div class="panel-title-group">
+          <i data-lucide="file-text" class="panel-icon"></i>
+          <h2>Civic Letter Generator</h2>
+        </div>
+        <span class="badge badge-green">Templates</span>
+      </div>
+
+      <div class="template-selector">
+        <label class="field-label">Select Template</label>
+        <div class="template-btns" id="template-btns">
+          <button class="template-btn active" data-template="pothole">
+            <i data-lucide="circle-alert" class="icon-xs"></i> Pothole Complaint
+          </button>
+          <button class="template-btn" data-template="accident">
+            <i data-lucide="siren" class="icon-xs"></i> Accident Report
+          </button>
+          <button class="template-btn" data-template="infrastructure">
+            <i data-lucide="hard-hat" class="icon-xs"></i> Infrastructure
+          </button>
+        </div>
+      </div>
+
+      <div class="letter-fields">
+        <div class="field-row">
+          <div class="field-group">
+            <label class="field-label" for="letter-to">To (Authority)</label>
+            <input type="text" id="letter-to" class="field-input" placeholder="e.g., Municipal Commissioner" />
+          </div>
+          <div class="field-group">
+            <label class="field-label" for="letter-ward">Ward / Zone</label>
+            <input type="text" id="letter-ward" class="field-input" placeholder="e.g., Ward 42" />
+          </div>
+        </div>
+        <div class="field-group">
+          <label class="field-label" for="letter-location">Location / Landmark</label>
+          <input type="text" id="letter-location" class="field-input" placeholder="e.g., Near City Hospital, MG Road" />
+        </div>
+      </div>
+
+      <div class="editor-wrapper">
+        <label class="field-label">Letter Body</label>
+        <div class="editor-toolbar" id="editor-toolbar">
+          <button class="toolbar-btn" data-cmd="bold" title="Bold"><b>B</b></button>
+          <button class="toolbar-btn" data-cmd="italic" title="Italic"><i>I</i></button>
+          <button class="toolbar-btn" data-cmd="underline" title="Underline"><u>U</u></button>
+          <span class="toolbar-divider"></span>
+          <button class="toolbar-btn" data-cmd="insertUnorderedList" title="Bullet List">
+            <i data-lucide="list" class="icon-xs"></i>
+          </button>
+          <button class="toolbar-btn" data-cmd="insertOrderedList" title="Numbered List">
+            <i data-lucide="list-ordered" class="icon-xs"></i>
+          </button>
+        </div>
+        <div class="letter-editor" id="letter-editor" contenteditable="true" spellcheck="true"></div>
+      </div>
+
+      <div class="letter-actions">
+        <button class="btn btn-amber" id="btn-generate">
+          <i data-lucide="sparkles" class="icon-sm"></i> AI Generate
+        </button>
+        <button class="btn btn-outline" id="btn-copy">
+          <i data-lucide="copy" class="icon-sm"></i> Copy
+        </button>
+        <button class="btn btn-outline" id="btn-download">
+          <i data-lucide="download" class="icon-sm"></i> Download
+        </button>
+        <button class="btn btn-outline" id="btn-print">
+          <i data-lucide="printer" class="icon-sm"></i> Print
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <!-- ═══════════════ FOOTER STATUS BAR ═══════════════ -->
+  <footer id="app-footer">
+    <div class="footer-left">
+      <span class="footer-item">
+        <i data-lucide="cpu" class="icon-xs"></i> Model: YOLOv8-RoadSafe
+      </span>
+      <span class="footer-item">
+        <i data-lucide="gauge" class="icon-xs"></i> Accuracy: <strong>94.7%</strong>
+      </span>
+    </div>
+    <div class="footer-center">
+      <span class="footer-item">Rakshak Sentinel v2.1.0 — Empowering Safer Roads Through AI</span>
+    </div>
+    <div class="footer-right">
+      <span class="footer-item">
+        <i data-lucide="wifi" class="icon-xs"></i> Connected
+      </span>
+    </div>
+  </footer>
+
+  <!-- ═══════════════ PRINT-ONLY TEMPLATE ═══════════════ -->
+  <div id="print-area" class="print-only"></div>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/leaflet.heat@0.2.0/dist/leaflet-heat.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
